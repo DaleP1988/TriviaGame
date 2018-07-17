@@ -1,0 +1,57 @@
+font-family: 'Bangers', cursive;
+font-family: 'Shrikhand', cursive;
+font-family: 'Luckiest Guy', cursive;
+font-family: 'Amatic SC', cursive;
+font-family: 'Nothing You Could Do', cursive;
+font-family: 'Rock Salt', cursive;
+font-family: 'Gochi Hand', cursive;
+font-family: 'Great Vibes', cursive; /* like trivial pursuit */
+
+
+body{
+background-color:darkslateblue;
+}
+
+.content{
+border-width: 5px;
+border-color: gold;
+margin: 15px;
+}
+
+.hero-image {
+background-image: URL();
+}
+
+i {
+font-family: 'Rock Salt', cursive;
+}
+
+h1 {
+font-family: 'Great Vibes', cursive;
+color: gold;
+
+}
+
+.cardD {
+gold
+
+}
+
+.cardC{
+purple    
+}
+
+.cardW{
+pink
+
+}
+
+.cardCo{
+blue
+
+}
+
+.cardH{
+green
+
+}
