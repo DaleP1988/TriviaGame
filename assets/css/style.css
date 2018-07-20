@@ -1,27 +1,177 @@
 
 body{
-background-color:darkslateblue;
-}
+background-color: rgb(13, 79, 99);
+height: 100%;
+} 
 
 .content{
-border-width: 5px;
-border-color: gold;
-margin: 15px;
+border-width: 5px       !important;
+border-color: gold    !important;
+border-style: solid;
+margin: 15px             !important;
+padding-bottom: 20px      !important;
 }
 
-.hero-image {
-background-image: URL(TPbox.jpg);
+
+#hold {
+
+padding: 20%;
+
+
+}
+
+#held {
+
+margin-left: 60px;  
+margin-top: 70px; 
+}
+
+#open {
+
+border-style: solid;
+padding:10px;
+margin-bottom: 50px;
+background-color: beige;
+border-color: burlywood;
+border-width: 2px;
+color:black;
+font-size: 15px;
+text-decoration: none;
+font-family: Arial, Helvetica, sans-serif;
+
 }
 
 p {
-font-family: 'Rock Salt', cursive;
-color: red;
 
 }
 
+#NQ {
+font-family: 'Rock Salt', cursive      !important;
+color: red                           !important;
+font-size: 25px                         !important;
+
+}
+
+
 h1 {
-font-family: 'Great Vibes', cursive;
-color: gold;
+font-family: 'Great Vibes', cursive     !important;                       
+color: gold                           !important;
+
+
+}
+
+#trivial {
+font-size: 90px                         !important;
+
+}
+
+h2 {
+color: darkgray;
+background-color: beige;
+}
+
+#dance {
+
+color: palevioletred               !important;
+font-family:Georgia, 'Times New Roman', Times, serif   !important;
+font-size: 30px;
+border-top-style: solid;
+border-bottom-style: solid;
+border-width: 1px;
+text-align: center;
+width: 250px;
+
+}
+
+hr {
+
+width: 30%;
+
+
+}
+
+h3 {
+
+font-family: Arial, Helvetica, sans-serif;
+background-color: beige;
+border-style: solid;
+width: 70%;
+border-width: 2px;
+border-color: burlywood;
+color:black;
+font-size: 20px;
+padding: 10px;
+
+}
+
+h4 {
+color: black;
+font-size: 25px              !important;
+font-family: 'Times New Roman', Times, serif;
+
+}
+
+
+#D {
+color: rgb(6, 6, 46);
+background: darkcyan;
+border:burlywood;
+border-style: solid;
+font-size: 25px;
+width: 60px;
+height: 60px;
+-webkit-border-radius: 25px;
+-moz-border-radius: 25px;  
+border-radius: 30px;
+font-family:'Times New Roman', Times, serif;
+text-align: center;
+padding-top: 7px;
+
+}
+
+
+#C {
+color: rgb(92, 69, 5);
+background: goldenrod;
+border: burlywood;
+border-style: solid;
+font-size: 25px;
+width: 60px;
+height: 60px;
+-webkit-border-radius: 25px;
+-moz-border-radius: 25px; 
+border-radius: 30px;
+font-family:'Times New Roman', Times, serif;
+text-align: center;
+padding-top: 7px;
+}
+
+.container {
+background-color: beige;
+border-style: solid;
+border-width: 2px;
+border-color: burlywood;
+padding-top: 10px;
+padding-bottom: 150px;
+
+
+}
+
+span {
+
+font-family: 'Times New Roman', Times, serif;
+color:black;
+
+}
+
+#arrowNextQuestion {
+
+display: none;
+
+}
+
+
+/* color: ÷lightyellow;
 
 }
 
