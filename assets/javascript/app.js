@@ -3,11 +3,11 @@ var triviaQuestions = [{
 	answerList: ["1956", "1948", "1910", "1800"],
 	answer: 1
 }, {
-	question: "Who was the founding Director of New York City Ballet?",
+	question: "Who was the founding Director of the New York City Ballet?",
 	answerList: ["George Balanchine", "Agnes de Mille", "William Forsythe", "Lincoln Kirstein"],
 	answer: 0
 }, {
-	question: "What is the name of America's National Ballet Company?",
+	question: "The name of America's National Ballet Company is:",
 	answerList: ["American Ballet Theatre", "American Ballet Company", "Classical Ballet of America", "American National Ballet"],
 	answer: 0
 }, {
@@ -15,7 +15,7 @@ var triviaQuestions = [{
 	answerList: ["Peter Martins", "Ben Stevenson", "Kevin McKenzie", "Gelsey Kirkland"],
 	answer: 2
 }, {
-	question: "At what venue does New York City Ballet dance for the majority of the performance season?",
+	question: "The New York City Ballet dances most of the performance season at:",
 	answerList: ["Joyce Theatre", "Metropolitan Opera House", "Alicy Tully Hall", "New York State Theatre"],
 	answer: 3
 }, {
@@ -23,41 +23,42 @@ var triviaQuestions = [{
 	answerList: ["pointe shoes", "sneakers", "thongs", "ballet flats"],
 	answer: 0
 }, {
-	question: "What is the name of the ballet competition that occurs every four years?",
+	question: "This Ballet Competition takes place every four years:",
 	answerList: ["American Ballet Grand Prix ", "U.S. International Ballet Competition", "American Ballet Competition", "U.S. Ballet Tournament"],
 	answer: 1
 }, {
-	question: "In general, when do ballet company performance seasons begin and end",
-	answerList: ["year around", "fall-winter", "fall-spring", "winter-fall"],
+	question: "In general, when do ballet company performance seasons begin and end?",
+	answerList: ["Year Around", "Fall-Winter", "Fall-Spring", "Winter-Fall"],
 	answer: 2
 }, {
-	question: "What choreographer is credited with expanding on the concept of Neo-Classical Ballet through the use of Movement Technologies?",
+	question: "Which choreographer expanded on the concept of Neo-Classical Ballet through the development of Movement Technologies?",
 	answerList: ["Merce Cunningham", "William Forsythe", "Martha Graham", "George Balanchine"],
 	answer: 1
 }, {
-	question: "There are a few a world-class ballet companies located on the west coast. Which of the below is one of them?",
+	question: "What is the name of the most prestigious ballet company on the west coast of the United States?",
 	answerList: ["Los Angeles Ballet", "Washington Ballet", "Houston Ballet", "San Fransisco Ballet"],
 	answer: 3
 }, {
-	question: "What is the name of the U.K.'s oldest dance comany (founded as a Ballet Company in 1926?",
+	question: "What is the name of the U.K.'s oldest dance company (founded as a Ballet Company in 1926)?",
 	answerList: ["Royal Ballet", "Birmingham Royal Ballet", "English National Ballet", "Rambert Ballet"],
 	answer: 0
 }, {
-	question: "At the court of this royal family ballet performances originated:",
+	question: "Ballet Performances originated in the Courts of this Royal Family:",
 	answerList: ["The Tudors", "The de Medicis", "The Spencers", "The Grands"],
 	answer: 1
 }, {
-	question: "In the second act of this ballet, the Willies (led by Myrtha) dance Albrecht to death",
+	question: "In Act II of this ballet, the Willies (led by Myrtha) dance Albrecht to death:",
 	answerList: ["Coppelia", "Don Quixote", "Swan Lake", "Giselle"],
 	answer: 3
 }, {
-	question: "This ballet was created by George Balanchine on the School of American Ballet:",
+	question: "This ballet was created on the School of American Ballet by George Balanchine:",
 	answerList: ["Serenade", "Symphony in C", "Tarantella", "Mozartiana"],
 	answer: 0
 }, {
-	question: "What is the name of the recently created holiday dedicated to acknowledging and appreciating the hard work of ballet dancers?",
+	question: "This holiday was recently coined to acknowledge and appreciate the hard work of ballet dancers:",
 	answerList: ["Balletpalooza", "Ballet Festival", "World Ballet Day", "National Ballet Day"],
 	answer: 2
+
 }];
 
 var questionTimer;
@@ -85,19 +86,22 @@ $("#arrowNextQuestion").on('click', function () {
 	clearTimeout(questionTimer);
 	newQuestion();
 
-
 });
-//$('#startOverBtn').on('click', function(){
-//	$(this).hide();
-//	newGame();
-//});
+
+$('#startOverBtn').on('click', function(){
+	$(this).hide();
+	newGame();
+});
 
 function newGame() {
 	$('#finalMessage').empty();
 	$('#correctAnswers').empty();
 	$('#incorrectAnswers').empty();
 	$('#unanswered').empty();
+	$('#startOverBtn').hide();
 	//hide new game button. empty all that had content
+
+	//reset the intervals and the IDs; make sure the start button happens later.
 	
 	currentQuestion = 0;
 	correctAnswer = 0;
@@ -107,6 +111,7 @@ function newGame() {
 }
 
 function newQuestion() {
+	$('#answerList').empty();
 	$('#message').empty();
 	$('#correctedAnswer').empty();
 	$('#img').empty();
@@ -114,7 +119,7 @@ function newQuestion() {
 	answered = true;
 
 	//sets up new questions & answerList
-	$('#currentQuestion').html('Question #' + (currentQuestion + 1) + ' of ' + triviaQuestions.length);
+	$('#currentQuestion').html('Question #' + (currentQuestion + 1) + ' of ' + (triviaQuestions.length));
 	$('#question').html('<h2>' + triviaQuestions[currentQuestion].question + '</h2>');
 	for (var i = 0; i < 4; i++) {
 		var choices = $('<div>');
@@ -175,26 +180,58 @@ function answerPage() {
 		answered = true;
 	}
 
-	if (currentQuestion == (triviaQuestions.length - 1)) {
-		setTimeout(scoreboard, 5000);
+	if (currentQuestion === (triviaQuestions.length-1)) {
+		setTimeout(scoreboard);
+		clearTimeout(questionTimer);   //lines 184 - 188 new.
+		$('#finalMessage').empty();
+		$('#correctAnswers').empty();
+		$('#incorrectAnswers').empty();
+		$('#unanswered').empty();
+
 	} else {
 		currentQuestion++;
-		questionTimer = setTimeout(newQuestion, 5000);
+		questionTimer = setTimeout(newQuestion, 5000);  // additions below. this was original code.
+		
 	}
-}
 
+	//if (currentQuestion > (triviaQuestions.length - 1)) {
+	//	endGame();
+//	} else {
+//		currentQuestion++;
+//		questionTimer = setTimeout(newQuestion, 5000);  // additions below. this was original code.
+	}
+
+// function endGame(){								//new from this line to 207, also if endGame()
+// 	$('#timeLeft').empty();
+// 	$('#message').empty();
+// 	$('#correctedAnswer').empty();
+// 	$('#img').empty();
+// 	$('#finalMessage').html("THE END");
+// 	$('#correctAnswers').empty();
+// 	$('#incorrectAnswers').empty();
+// 	$('#unanswered').empty();
+//}
 function scoreboard() {
-	$('#timeLeft').empty();
-	$('#message').empty();
-	$('#correctedAnswer').empty();
-	$('#img').empty();
-
-	$('#finalMessage').html(messages.finished);
-	$('#correctAnswers').html("Correct Answers: " + correctAnswer);
-	$('#incorrectAnswers').html("Incorrect Answers: " + incorrectAnswer);
-	$('#unanswered').html("Unanswered: " + unanswered);
-	$('#startOverBtn').addClass('reset').show().html('Start Over?')
-		.click(function () {
-			newGame();
-		});
+		$('#timeLeft').empty();
+		$('#message').empty();
+	//	$('#correctedAnswer').empty();
+	//	$('#img').empty();
+		$('#currentQuestion').empty();
+		$('.thisChoice').empty(); //Clears question page
+		$('#question').empty();
+		$('#finalMessage').html(messages.finished);
+		$('#correctAnswers').html("Correct Answers: " + correctAnswer);
+		$('#incorrectAnswers').html("Incorrect Answers: " + incorrectAnswer);
+		$('#unanswered').html("Unanswered: " + unanswered);
+		$('#arrowNextQuestion').hide();
+		//$('#startOverBtn').html('Start Over?');
+	
 }
+	// $('#startOverBtn').click(newGame);
+	// $('#startOverBtn').click(function() {console.log('clicked')});
+			
+	//use show from jquery
+//}
+
+
+$('#startOverBtn').click(newGame);

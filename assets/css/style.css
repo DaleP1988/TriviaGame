@@ -2,73 +2,65 @@
 body{
 background-color: rgb(13, 79, 99);
 height: 100%;
-} 
-
-.content{
 border-width: 5px       !important;
 border-color: gold    !important;
 border-style: solid;
-margin: 15px             !important;
-padding-bottom: 20px      !important;
-}
-
+margin: 25px             !important;
+cursor: pointer;
+} 
 
 #hold {
 
 padding: 20%;
-
-
 }
 
-#held {
-
-margin-left: 60px;  
-margin-top: 70px; 
-}
 
 #open {
 
 border-style: solid;
 padding:10px;
 margin-bottom: 50px;
-background-color: beige;
+background-color: ivory; 
 border-color: burlywood;
 border-width: 2px;
 color:black;
 font-size: 15px;
 text-decoration: none;
 font-family: Arial, Helvetica, sans-serif;
-
-}
-
-p {
-
+margin-left: 230px;
 }
 
 #NQ {
 font-family: 'Rock Salt', cursive      !important;
 color: red                           !important;
 font-size: 25px                         !important;
-
+font-weight: bold;
+margin-left: 130px;
 }
 
 
 h1 {
 font-family: 'Great Vibes', cursive     !important;                       
 color: gold                           !important;
-
-
 }
 
 #trivial {
 font-size: 90px                         !important;
-
+margin-left: 120px;
 }
 
-h2 {
-color: darkgray;
-background-color: beige;
+#dance1 {
+margin-left: 200px;
+color: palevioletred               !important;
+font-family:Georgia, 'Times New Roman', Times, serif   !important;
+font-size: 30px;
+border-top-style: solid;
+border-bottom-style: solid;
+border-width: 1px;
+text-align: center;
+width: 250px;
 }
+
 
 #dance {
 
@@ -80,54 +72,63 @@ border-bottom-style: solid;
 border-width: 1px;
 text-align: center;
 width: 250px;
-
 }
 
 hr {
 
 width: 30%;
-
-
 }
 
-h3 {
-
-font-family: Arial, Helvetica, sans-serif;
-background-color: beige;
-border-style: solid;
-width: 70%;
-border-width: 2px;
-border-color: burlywood;
-color:black;
-font-size: 20px;
-padding: 10px;
-
-}
 
 h4 {
 color: black;
-font-size: 25px              !important;
+font-size: 15px              !important;
 font-family: 'Times New Roman', Times, serif;
-
+padding: 10px;
 }
 
-
-#D {
-color: rgb(6, 6, 46);
-background: darkcyan;
-border:burlywood;
+#start-button {    /* play-button fix the h4 tag*/
+font-size: 15px;
+font-family: Arial, Helvetica, sans-serif;
+margin-left: 180px;
 border-style: solid;
-font-size: 25px;
-width: 60px;
-height: 60px;
--webkit-border-radius: 25px;
--moz-border-radius: 25px;  
-border-radius: 30px;
-font-family:'Times New Roman', Times, serif;
-text-align: center;
-padding-top: 7px;
-
+padding: 5px;
+background-color: pink;
 }
+
+#cbody {
+height: 550px;
+width: 550px;
+margin-top: 50px;
+}
+
+#java {
+font-size: 18px                                     !important;
+font-family: 'Times New Roman', Times, serif       !important;
+color: black                                       !important;
+height: 100%;
+padding-left: 25px;
+padding-right: 25px;
+}
+
+header {
+
+margin-top: 50px;
+margin-left: 30px      !important;
+}
+
+#NQ2 {
+font-family: 'Rock Salt', cursive      !important;
+color: red                           !important;
+font-size: 25px                         !important;
+font-weight: bold;
+}
+    
+
+#trivial2 {
+font-size: 90px                         !important;
+}
+
 
 
 #C {
@@ -144,70 +145,115 @@ border-radius: 30px;
 font-family:'Times New Roman', Times, serif;
 text-align: center;
 padding-top: 7px;
+margin-top: 30px;
 }
 
-.container {
+
+
+#content {
+background-color: beige;
+border-style: solid;
+border-width: 2px;
+border-color: burlywood;
+padding-top: 10px;
+padding-bottom: 200px;
+padding-left: 30px;
+margin-left: 50px;
+height: 95%;
+}
+
+.contain {
 background-color: beige;
 border-style: solid;
 border-width: 2px;
 border-color: burlywood;
 padding-top: 10px;
 padding-bottom: 150px;
+}
 
+.col-md-9 {
+
+height: 680px;
 
 }
 
 span {
-
 font-family: 'Times New Roman', Times, serif;
 color:black;
-
 }
 
 #arrowNextQuestion {
-
 display: none;
+block-size: 20%;
+margin-left: 20px;
+}
+
+#left {
+
+top: 22px;
 
 }
 
 
-/* color: ÷lightyellow;
+/* classes and IDs from JS; image styling: ADD HERE ***********************************************/
+
+
+#currentQuestion, .thisChoice, #question, h2,
+h3, #timeLeft, #message, #correctedAnswer, #final, 
+#correct, #incorrect, #unanswered, h4, #correctAnswers, 
+#incorrectAnswers, #finalMessage, #startOverButton
+
+ {
+font-size: 15px;
+color:black;
+font-weight: bold;
+font-family: Arial, Helvetica, sans-serif;
+margin-left: 20px'
+}
+
+
+#timeLeft {
+
+margin-top: 20px;
+margin-left: 20px;
 
 }
 
-a {
-
-}
-
-h3 {
-
-
-}
-
-h2{
+#image {
 
 
 
 }
 
-h4{
 
+
+@media screen and (max-width: 740px) {
+
+
+#open {
+font-size: 15px   !important;
+display: none;
+}
+
+#trivial {
+font-size: 40px   !important;
+float:left;
+}
+
+#dance1 {
+font-size: 15px   !important;
+float: left;
+display:none;
 
 }
 
-span {
+#NQ {
+font-size: 15px   !important;
+float: left;
 
 
 }
-
-.circle-in {
-
 }
 
-#choreo {
 
-}
 
-#dancers {
-
-}
