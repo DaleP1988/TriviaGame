@@ -10,4 +10,4 @@ Once the player enters the game, the first of the trivia questions appear. The p
 
 
 
-**Check out this site at: [Not Quite Trivial Pursuit (Ballet Edition)](https://dalep1988.github.io/TriviaGame/.).**
+**Check out this site at: [Not Quite Trivial Pursuit (Ballet Edition)](https://dalep1988.github.io/TriviaGame/).**
