@@ -11,3 +11,7 @@ Once the player enters the game, the first of the trivia questions appear. The p
 
 
 **Check out this site at: [Not Quite Trivial Pursuit (Ballet Edition)](https://dalep1988.github.io/TriviaGame/).**
+
+
+![trivial](https://user-images.githubusercontent.com/38080854/46481684-c34f7e00-c7a8-11e8-8096-0775b9c0fde3.jpg)
+
